@@ -57,14 +57,14 @@ class MiniNavbar  extends Component{
               </div>
             </div>
             <Switch>
-            {SidebarData.map((route, index) => (
-              <Route
-                key={index}
-                path={route.path}
-                exact={route.exact}
-                children={<route.main/>}
-              />
-            ))}
+              {SidebarData.map((route, index) => (
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  children={<route.main/>}
+                />
+              ))}
             </Switch>
           </div>
         </Router>

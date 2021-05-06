@@ -1,6 +1,9 @@
-import GeneralInformation from '../pages/GeneralInformation'
+import GenerationInformation from '../pages/GenerationInformation'
+import PropertyDetail from '../pages/PropertyDetail'
+
 export const SidebarData = [
   {
+    key: 1,
     cLinkName: 'slidebar-item css-check',
     cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
@@ -9,10 +12,11 @@ export const SidebarData = [
     title: 'General Information',
     number: 1,
     path: "/",
-    main: () => <GeneralInformation/>,
+    main: () => <GenerationInformation/>,
     exact: true
   },
   {
+    key: 2,
     cLinkName: 'slidebar-item css-check',
     cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
@@ -20,9 +24,11 @@ export const SidebarData = [
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
     title: 'Property Detail',
     number: 1,
-    path: "/"
+    path: "/propertyDetail",
+    main: () => <PropertyDetail/>,
   },
   {
+    key: 3,
     cLinkName: 'slideba-item css-check',
     cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
@@ -33,6 +39,7 @@ export const SidebarData = [
     path: "/"
   },
   {
+    key: 4,
     cLinkName: 'slidebar-item css-check',
     cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
@@ -43,6 +50,7 @@ export const SidebarData = [
     path: "/"
   },
   {
+    key: 5,
     cLinkName: 'slidebar-item css-check',
     cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
@@ -53,6 +61,7 @@ export const SidebarData = [
     path: "/"
   },
   {
+    key: 6,
     cLinkName: 'slidebar-item css-check',
     cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
@@ -63,6 +72,7 @@ export const SidebarData = [
     path: "/"
   },
   {
+    key: 7,
     cLinkName: 'slidebar-item css-check',
     cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
