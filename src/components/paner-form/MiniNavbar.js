@@ -1,14 +1,24 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "../../App.css";
-import { SidebarData } from "../data/SidebarData";
+import  SidebarData  from "../data/SidebarData";
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Link } from "react-router-dom";
 
-class MiniNavbar  extends Component{
-  state ={
-    isActive: false,
+function MiniNavbar(){
+  const [active, setActive] = useState({
+    activeObj: null,
+    SidebarData,
+  });
+  function toggleActive(index) {
+    setActive({ ...active, activeObj: active.SidebarData[index] });
   }
-  render(){
+  function toggleActiveStyle(index) {
+    if (active.SidebarData[index] === active.activeObj) {
+      return "slidebar-item slidebar-item--is-active css-check";
+    } else {
+      return "slidebar-item css-check";
+    }
+  }
     return (
       <div className="oka-page">
       <div className="container css-theme">
@@ -18,9 +28,9 @@ class MiniNavbar  extends Component{
               <div className="table__detail css-detail">
                 <span>
                   <div className="slidebar css-sidebar">
-                    {SidebarData.map((item, index) => {
+                    {active.SidebarData.map((item, index) => {
                       return (
-                        <Link key={index} className={this.state.isActive ? item.cLinkName : item.cLinkActive} to={item.path} onClick={() => this.setState({ isActive: !this.state.isActive })}>
+                        <Link key={index} className={toggleActiveStyle(index)} to={item.path} onClick={() => {toggleActive(index)}}>
                           <div className={item.cFlexbox}>
                             <span className={item.cText}>{item.title}</span>
                             <span className={item.cNumber} style={{paddingRight: "10px", paddingLeft: "10px"}}>
@@ -57,7 +67,7 @@ class MiniNavbar  extends Component{
               </div>
             </div>
             <Switch>
-              {SidebarData.map((route, index) => (
+              {active.SidebarData.map((route, index) => (
                 <Route
                   key={index}
                   path={route.path}
@@ -72,7 +82,5 @@ class MiniNavbar  extends Component{
     </div>
     );
   }
-  
-}
 
 export default MiniNavbar;

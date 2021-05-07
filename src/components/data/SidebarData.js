@@ -1,11 +1,9 @@
 import GenerationInformation from '../pages/GenerationInformation'
 import PropertyDetail from '../pages/PropertyDetail'
 
-export const SidebarData = [
+const SidebarData = [
   {
     key: 1,
-    cLinkName: 'slidebar-item css-check',
-    cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
     cText: 'text css-nb-text',
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
@@ -17,8 +15,6 @@ export const SidebarData = [
   },
   {
     key: 2,
-    cLinkName: 'slidebar-item css-check',
-    cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
     cText: 'text css-nb-text',
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
@@ -29,8 +25,6 @@ export const SidebarData = [
   },
   {
     key: 3,
-    cLinkName: 'slideba-item css-check',
-    cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
     cText: 'text css-nb-text',
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
@@ -40,8 +34,6 @@ export const SidebarData = [
   },
   {
     key: 4,
-    cLinkName: 'slidebar-item css-check',
-    cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
     cText: 'text css-nb-text',
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
@@ -51,8 +43,6 @@ export const SidebarData = [
   },
   {
     key: 5,
-    cLinkName: 'slidebar-item css-check',
-    cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
     cText: 'text css-nb-text',
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
@@ -62,8 +52,6 @@ export const SidebarData = [
   },
   {
     key: 6,
-    cLinkName: 'slidebar-item css-check',
-    cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
     cText: 'text css-nb-text',
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
@@ -73,8 +61,6 @@ export const SidebarData = [
   },
   {
     key: 7,
-    cLinkName: 'slidebar-item css-check',
-    cLinkActive: 'slidebar-item slidebar-item--is-active css-check',
     cFlexbox: 'flexbox css-nb',
     cText: 'text css-nb-text',
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
@@ -83,3 +69,4 @@ export const SidebarData = [
     path: "/"
   }
 ];
+export default SidebarData;
