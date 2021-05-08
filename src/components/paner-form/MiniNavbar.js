@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "../../App.css";
-import  SidebarData  from "../data/SidebarData";
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import SidebarData from "../data/SidebarData";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-function MiniNavbar(){
+function MiniNavbar() {
   const [active, setActive] = useState({
     activeObj: null,
     SidebarData,
@@ -19,8 +19,8 @@ function MiniNavbar(){
       return "slidebar-item css-check";
     }
   }
-    return (
-      <div className="oka-page">
+  return (
+    <div className="oka-page">
       <div className="container css-theme">
         <Router>
           <div className="table-row css-row">
@@ -30,10 +30,23 @@ function MiniNavbar(){
                   <div className="slidebar css-sidebar">
                     {active.SidebarData.map((item, index) => {
                       return (
-                        <Link key={index} className={toggleActiveStyle(index)} to={item.path} onClick={() => {toggleActive(index)}}>
+                        <Link
+                          key={index}
+                          className={toggleActiveStyle(index)}
+                          to={item.path}
+                          onClick={() => {
+                            toggleActive(index);
+                          }}
+                        >
                           <div className={item.cFlexbox}>
                             <span className={item.cText}>{item.title}</span>
-                            <span className={item.cNumber} style={{paddingRight: "10px", paddingLeft: "10px"}}>
+                            <span
+                              className={item.cNumber}
+                              style={{
+                                paddingRight: "10px",
+                                paddingLeft: "10px",
+                              }}
+                            >
                               {item.number}
                             </span>
                           </div>
@@ -42,7 +55,10 @@ function MiniNavbar(){
                     })}
                   </div>
                 </span>
-                <div className="table__block css-tbl-block" style={{marginTop: "30px"}}>
+                <div
+                  className="table__block css-tbl-block"
+                  style={{ marginTop: "30px" }}
+                >
                   <label className="block__label css-label">
                     <span>Mandatory Fields Progress</span>
                   </label>
@@ -55,11 +71,15 @@ function MiniNavbar(){
                           aria-valuenow="52"
                           aria-valuemin="0"
                           aria-valuemax="100"
-                          style={{width: "52%"}}
+                          style={{ width: "52%" }}
                         ></div>
                       </div>
                     </div>
-                    <div align="right" className="column css-col" style={{paddingLeft: "0px"}}>
+                    <div
+                      align="right"
+                      className="column css-col"
+                      style={{ paddingLeft: "0px" }}
+                    >
                       <span className="text css-text">52%</span>
                     </div>
                   </div>
@@ -72,7 +92,7 @@ function MiniNavbar(){
                   key={index}
                   path={route.path}
                   exact={route.exact}
-                  children={<route.main/>}
+                  children={<route.main />}
                 />
               ))}
             </Switch>
@@ -80,7 +100,7 @@ function MiniNavbar(){
         </Router>
       </div>
     </div>
-    );
-  }
+  );
+}
 
 export default MiniNavbar;

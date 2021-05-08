@@ -5,14 +5,14 @@ function GenerationInformation() {
   return (
     <>
       <div className="table__column__2 css-column-2">
-        <div className="table__title css-row" style={{ marginBottom: "16px" }}>
+        <div className="table-row css-row" style={{ marginBottom: "16px" }}>
           <div className="column2 css-col">
             <div className="text2 css-text-2">
               <h2>Generation Information</h2>
             </div>
           </div>
         </div>
-        <div className="table__title css-row">
+        <div className="table-row css-row">
           <div className="detail__column css-col">
             <div
               className="box__detail css-bx-dtl"
@@ -569,6 +569,7 @@ function GenerationInformation() {
             </div>
           </div>
         </div>
+        <div className="block" style={{marginRight: "0px", marginBottom: "50px", backgroundColor:"red", width: "20px", height: "50px"}}></div>
       </div>
     </>
   );
