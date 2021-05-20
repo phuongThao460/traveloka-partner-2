@@ -24,7 +24,7 @@ function MiniNavbar() {
       <div className="container css-theme">
         <Router>
           <div className="table-row css-row">
-            <div className="table__column css-column">
+            <div className="table__column css-column" style={{marginTop: "58px"}}>
               <div className="table__detail css-detail">
                 <span>
                   <div className="slidebar css-sidebar">
