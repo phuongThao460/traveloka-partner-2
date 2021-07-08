@@ -1,10 +1,11 @@
 import GenerationInformation from '../pages/GenerationInformation'
 import PropertyDetail from '../pages/PropertyDetail'
-
+import Rooms from '../pages/Rooms'
 const SidebarData = [
   {
     key: 1,
     cFlexbox: 'flexbox css-nb',
+    cSidebarActive: 'slidebar-item slidebar--is-active css-check',
     cText: 'text css-nb-text',
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
     title: 'General Information',
@@ -30,7 +31,8 @@ const SidebarData = [
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
     title: 'Property Facilities',
     number: 1,
-    path: "/"
+    path: "/rooms",
+    main: () => <Rooms/>,
   },
   {
     key: 4,
@@ -39,7 +41,8 @@ const SidebarData = [
     cNumber: 'bagde__number bagde__color bagde__pill css-bagde',
     title: 'Rooms',
     number: 1,
-    path: "/"
+    path: "/rooms",
+    main: () => <Rooms/>,
   },
   {
     key: 5,

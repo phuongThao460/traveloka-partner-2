@@ -85,15 +85,32 @@ select {
   color: rgb(76, 76, 76);
   transition: none 0s ease 0s;
 }
+a.slidebar-item:focus {
+  background-color: rgb(230, 241, 250) !important;
+}
+.slidebar--is-active{
+  background-color: rgb(230, 241, 250) !important;
+}
+.menu-item::after {
+  font-weight: 500;
+  color: black !important;
+  background-color: rgb(230, 241, 250) !important;
+}
+
 .css-text {
   font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
+}
+.css-check:hover {
+  background-color: #f2f4f7;
 }
 .css-check:first-child {
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
-
+.css-nb::after {
+  background-color: aqua;
+}
 .flexbox {
   display: flex;
   -webkit-box-pack: justify;
@@ -101,6 +118,9 @@ select {
   -webkit-box-align: center;
   align-items: center;
   width: 100%;
+}
+.flexbox::after {
+  background-color: aqua;
 }
 
 .text {
@@ -110,11 +130,6 @@ select {
 .css-bagde.bagde__color {
   color: rgb(255, 255, 255);
   background-color: rgb(255, 97, 92);
-}
-.slidebar-item--is-active {
-  font-weight: 500;
-  color: black !important;
-  background-color: rgb(142, 204, 241) !important;
 }
 
 .css-bagde.bagde__pill {
@@ -974,4 +989,84 @@ textarea {
 .css-number-2:not(:last-child) {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
+}
+.css-room {
+  position: relative;
+  display: block;
+  padding: 16px 28px;
+  margin-bottom: 0px;
+  background-color: rgb(237, 247, 252) !important;
+}
+.css-room:not(:last-child) {
+  border-bottom: 1px solid rgb(237 247 252);
+}
+.css-room:first-child {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.css-flex-room {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 30px;
+}
+.btn {
+  box-shadow: none;
+  border-color: transparent;
+  cursor: pointer;
+}
+.btn.btn--variant-link {
+  background-color: transparent;
+  color: rgb(87, 167, 237);
+  border-radius: 0px;
+  font-weight: 600;
+}
+.btn.btn--variant-link:hover {
+  color: rgb(101, 127, 163);
+}
+.css-room-table {
+  position: relative;
+  display: block;
+  padding: 16px 28px;
+  margin-bottom: 0px;
+  background-color: rgb(247, 250, 252);
+}
+.css-remove {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.css-remove-2 {
+  display: none;
+}
+.css-remove-3 {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 28px;
+  margin: 0px;
+  top: 46px;
+  left: 50%;
+  background-color: rgb(240, 240, 240);
+  transform: translate(-50%, -50%);
+}
+.css-remove-item {
+  position: relative;
+  -webkit-box-flex: 1;
+  max-width: 50%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  flex: 0 0 50%;
+}
+.css-select {
+  width: 100%;
 }
